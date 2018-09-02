@@ -63,6 +63,7 @@
      <deploymentType>cloudhub</deploymentType>
             <muleVersion>3.9.0</muleVersion>
             <username>rishi90</username>
+	<uri>anypoint.mulesoft.com</uri>
             <password>Rishishan7988#</password>
 	<workerType>micro</workerType>
              <environment>SANDBOX</environment>
@@ -79,6 +80,16 @@
     </plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+				<snapshotRepository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+				</snapshotRepository>
+				<repository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+</distributionManagement>
 
 	<!-- Mule Dependencies -->
 	<dependencies>
