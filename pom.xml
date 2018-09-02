@@ -63,7 +63,7 @@
             <muleVersion>3.9.0</muleVersion>
             <username>rishi90</username>
             <password>Rishishan7988#</password>
-<workerType>micro</workerType
+	<workerType>micro</workerType>
              <environment>SANDBOX</environment>
         </configuration>
         <executions>
