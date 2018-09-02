@@ -17,11 +17,7 @@
 	</properties>
 
 	<build>
-		<distributionManagement>
-    ...
-    <downloadUrl>https://anypoint.mulesoft.com/cloudhub/#/console/applications/cloudhub/test-jenkin</downloadUrl>
-    <status>deployed</status>
-  </distributionManagement>
+		
 		<plugins>
 			
 			<plugin>
@@ -86,7 +82,11 @@
     </plugin>
 		</plugins>
 	</build>
-	distributionManagement>
+	<distributionManagement>
+    
+    <downloadUrl>https://anypoint.mulesoft.com/cloudhub/#/console/applications/cloudhub/test-jenkin</downloadUrl>
+    <status>deployed</status>
+  </distributionManagement>
 
 	<!-- Mule Dependencies -->
 	<dependencies>
