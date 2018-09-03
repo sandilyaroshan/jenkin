@@ -8,12 +8,14 @@
     <packaging>mule</packaging>
 	<name>Mule test-jenkin Application</name>
 
+
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+<cloudhub.domain>test-jenkin.us-e2.cloudhub.io</cloudhub.domain>
 		<mule.version>3.9.0</mule.version>
     	<mule.tools.version>1.2</mule.tools.version>
+	    
 	</properties>
 
 	<build>
@@ -64,7 +66,7 @@
             <username>rishi90</username>
             <password>Rishishan7988#</password>
 <workerType>micro</workerType>
-             <environment>Sandbox</environment>
+	<environment>Sandbox</environment>
         </configuration>
         <executions>
             <execution>
