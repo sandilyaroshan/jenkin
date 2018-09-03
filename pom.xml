@@ -3,10 +3,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mycompany</groupId>
-	<artifactId>test-jenkin</artifactId>
+	<artifactId>tester</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule</packaging>
-	<name>Mule test-jenkin Application</name>
+	<name>Mule tester Application</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,9 +17,16 @@
 	</properties>
 
 	<build>
-		
 		<plugins>
-			
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-app-maven-plugin</artifactId>
+				<version>${mule.tools.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+                    <copyToAppsDirectory>true</copyToAppsDirectory>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
@@ -47,52 +54,65 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-app-maven-plugin</artifactId>
-				<version>${mule.tools.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-                    <copyToAppsDirectory>false</copyToAppsDirectory>
-				</configuration>
-			</plugin>
-			<plugin>
-      <groupId>org.mule.tools.maven</groupId>
-      <artifactId>mule-maven-plugin</artifactId>
-      <version>2.0</version>
-<configuration>
-     <deploymentType>cloudhub</deploymentType>
-            <muleVersion>3.9.0</muleVersion>
-            <username>rishi90</username>
-	<applicationName>test-jenkin</applicationName>
-	<uri>anypoint.mulesoft.com</uri>
-            <password>Rishishan7988#</password>
-	<workerType>micro</workerType>
-             <environment>SANDBOX</environment>
-        </configuration>
-        <executions>
-            <execution>
-                <id>deploy</id>
-                <phase>deploy</phase>
-                <goals>
-                    <goal>deploy</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-    
-    <downloadUrl>https://anypoint.mulesoft.com/cloudhub/#/console/applications/cloudhub/test-jenkin</downloadUrl>
-    
-  </distributionManagement>
 
 	<!-- Mule Dependencies -->
 	<dependencies>
-		</dependencies>
-		<!-- Mule Transports -->
 		
+		<!-- Mule Transports -->
+		<dependency>
+			<groupId>org.mule.transports</groupId>
+			<artifactId>mule-transport-file</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.transports</groupId>
+			<artifactId>mule-transport-http</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mule.transports</groupId>
+			<artifactId>mule-transport-vm</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Mule Modules -->
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-scripting</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-xml</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- for testing -->
+		<dependency>
+			<groupId>org.mule.tests</groupId>
+			<artifactId>mule-tests-functional</artifactId>
+			<version>${mule.version}</version>
+			<scope>test</scope>
+		</dependency>
+	<dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-module-http</artifactId>
+            <version>${mule.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-module-spring-config</artifactId>
+            <version>${mule.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 	<repositories>
           <repository>
