@@ -3,10 +3,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mycompany</groupId>
-	<artifactId>tester</artifactId>
+	<artifactId>test-jenkin</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule</packaging>
-	<name>Mule tester Application</name>
+	<name>Mule test-jenkin Application</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -54,6 +54,28 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+      <groupId>org.mule.tools.maven</groupId>
+      <artifactId>mule-maven-plugin</artifactId>
+      <version>2.0</version>
+<configuration>
+     <deploymentType>cloudhub</deploymentType>
+            <muleVersion>3.9.0</muleVersion>
+            <username>rishi90</username>
+            <password>Rishishan7988#</password>
+<workerType>micro</workerType>
+             <environment>Sandbox</environment>
+        </configuration>
+        <executions>
+            <execution>
+                <id>deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                    <goal>deploy</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
 		</plugins>
 	</build>
 
