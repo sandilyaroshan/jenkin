@@ -51,7 +51,7 @@
 									<directory>mappings/</directory>
 								</resource>
 							</resources>
-							<skip>true</skip>
+							
 						</configuration>
 					</execution>
 				</executions>
