@@ -92,11 +92,7 @@
 			<scope>provided</scope>
 		</dependency>
 		
-<dependency>
-    <groupId>org.mule.tools.maven</groupId>
-    <artifactId>mule-app-maven-plugin</artifactId>
-    <version>1.2</version>
-</dependency>
+
 		<dependency>
 			<groupId>org.mule.transports</groupId>
 			<artifactId>mule-transport-http</artifactId>
@@ -139,20 +135,7 @@
     </dependencies>
 
 	<repositories>
-		 <repository>
-             <id>apache-snapshots</id>
-             <name>Apache Snapshots Repository</name>
-             <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-             <layout>default</layout>
-             <snapshots>
-                 <enabled>true</enabled>
-                 <updatePolicy>always</updatePolicy>
-                 <checksumPolicy>ignore</checksumPolicy>
-             </snapshots>
-             <releases>
-                 <enabled>false</enabled>
-             </releases>
-         </repository>
+		 
           <repository>
             <id>Central</id>
             <name>Central</name>
