@@ -62,21 +62,19 @@
       <version>2.0</version>
 <configuration>
      <deploymentType>cloudhub</deploymentType>
+	<uri>https://anypoint.mulesoft.com</uri>
             <muleVersion>3.9.0</muleVersion>
             <username>rishi90</username>
             <password>Rishishan7988#</password>
-<workerType>micro</workerType>
-	<environment>Sandbox</environment>
+	<applicationName>test-jenkin</applicationName>
+        <environment>Sandbox</environment>
+	<properties>
+		<key>value</key>
+	</properties>
         </configuration>
         <executions>
-            <execution>
-                <id>deploy</id>
-                <phase>deploy</phase>
-                <goals>
-                    <goal>deploy</goal>
-                </goals>
-            </execution>
-        </executions>
+            
+               
     </plugin>
 		</plugins>
 	</build>
