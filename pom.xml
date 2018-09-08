@@ -72,10 +72,7 @@
 		<key>value</key>
 	</properties>
         </configuration>
-        <executions>
-            
-               
-    </plugin>
+        </plugin>
 		</plugins>
 	</build>
 
